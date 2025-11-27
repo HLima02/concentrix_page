@@ -4,6 +4,7 @@ import Hero from './sections/Hero'
 import MainBanner from './sections/MainBanner'
 import Benefits from './sections/Benefits'
 import ServiceSection from './sections/ServiceSection'
+import StepByStep from './sections/StepByStep'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <MainBanner />
       <Benefits />
       <ServiceSection />
+      <StepByStep />
     </main>
   )
 }

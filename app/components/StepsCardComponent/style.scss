@@ -1,0 +1,27 @@
+.steps_card_item {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 320px;
+
+  h3 {
+    color: #D0DAE1;
+    font-weight: 700;
+    font-size: 48px;
+  }
+
+  h4 {
+    font-size: 32px;
+    color: #405564;
+    font-weight: 400;
+    margin: 10px 0;
+  }
+
+  p {
+    color: #5E6D7C;
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+}

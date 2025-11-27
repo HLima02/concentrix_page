@@ -1,0 +1,36 @@
+.step_by_step {
+  background-color: #E3E6EA;
+  padding: 90px 0 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .step_by_step_content {
+    display: flex;
+    flex-direction: column;
+
+    .steps_cards_section {
+      margin: 40px 0;
+      width: 100%;
+
+      .stepsSwiper {
+        padding-bottom: 40px; // espaço para pagination
+      }
+
+      .swiper-slide {
+        display: flex;
+        justify-content: center;
+      }
+
+      .swiper-button-prev,
+        .swiper-button-next {
+          color: #000; // personalize
+        }
+
+        .swiper-pagination-bullet-active {
+          background: #000; // personalize
+        }
+    }
+  }
+}
+ 
