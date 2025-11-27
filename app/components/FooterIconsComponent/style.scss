@@ -1,0 +1,17 @@
+.footer_icons {
+  h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #004955;
+    margin-bottom: 20px;
+  }
+
+  .footer_icon_section{
+    display: flex;
+    gap: 10px;
+    img {
+      width: 58px;
+      height: 58px;
+    }
+  }
+}

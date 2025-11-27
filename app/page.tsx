@@ -6,6 +6,7 @@ import Benefits from './sections/Benefits'
 import ServiceSection from './sections/ServiceSection'
 import StepByStep from './sections/StepByStep'
 import AskedQuestions from './sections/AskedQuestions'
+import Footer from './sections/Footer'
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <ServiceSection />
       <StepByStep />
       <AskedQuestions />
+      <Footer />
     </main>
   )
 }

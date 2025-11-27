@@ -61,3 +61,47 @@ export const askedQuestion = [
     response: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
   }
 ]
+
+export const footerInfoCall = {
+  title: 'Fale com a gente',
+  images: [
+      {
+        id: 0,
+        image: '/images/email_icon.png',
+      },
+      {
+        id: 1,
+        image: '/images/whats_icon_02.png',
+      },
+      {
+        id: 2,
+        image: '/images/call_icon.png',
+      },
+      {
+        id: 3,
+        image: '/images/message_icon.png',
+      }
+    ]
+}
+
+export const footerInfoPayments = {
+  title: 'Formas de pagamento',
+    images: [
+      {
+        id: 0,
+        image: '/images/pix_icon.png',
+      },
+      {
+        id: 1,
+        image: '/images/credit_card_icon.png',
+      },
+      {
+        id: 2,
+        image: '/images/payment_icon.png',
+      },
+      {
+        id: 3,
+        image: '/images/google_pay_icon.png',
+      }
+    ]
+}
