@@ -18,3 +18,10 @@ export type CardBenefitsProps = {
   cardImage: string,
   cardTitle: string
 }
+
+export type StepsCardComponentProps = {
+  numberLabel: string 
+  title:string ,
+  text:string, 
+  image:string
+}

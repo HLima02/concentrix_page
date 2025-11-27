@@ -5,6 +5,7 @@ import MainBanner from './sections/MainBanner'
 import Benefits from './sections/Benefits'
 import ServiceSection from './sections/ServiceSection'
 import StepByStep from './sections/StepByStep'
+import AskedQuestions from './sections/AskedQuestions'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Benefits />
       <ServiceSection />
       <StepByStep />
+      <AskedQuestions />
     </main>
   )
 }

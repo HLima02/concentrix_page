@@ -28,3 +28,36 @@ export const stepsContent = [
     image: "/images/contract_icon.png"
   },
 ]
+
+export const askedQuestion = [
+  {
+    id: 0,
+    question: "Quais débitos consigo consultar?",
+    response: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
+  },
+  {
+    id: 1,
+    question: "Posso negociar todas as parcelas?",
+    response: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
+  },
+  {
+    id: 2,
+    question: "Consigo informar que já fiz o pagamento?",
+    response: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
+  },
+  {
+    id: 3,
+    question: "Qual o prazo para a baixa do pagamento?",
+    response: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
+  },
+  {
+    id: 4,
+    question: "Este portal é seguro?",
+    response: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
+  },
+  {
+    id: 5,
+    question: "Preciso pagar algum valor para acessar?",
+    response: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
+  }
+]

@@ -1,0 +1,62 @@
+.asked {
+  background-color: #039DB7;
+  padding: 90px 0 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+
+  .asked_content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+
+    h2 {
+      font-weight: 700;
+      font-size: 40px;
+    }
+
+    p {
+      font-size: 22px;
+      font-weight: 300;
+    }
+
+    .faq_section {
+      margin: 40px 0;
+      width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 580px) {
+    .benefits_content  {
+      .cards {
+        flex-direction: column;
+        gap: 0;
+
+        .benefits_card_area {
+          width: 100%;
+          flex-direction: row;
+        }
+
+        .payment {
+          width: 100%;
+          align-items: center;
+          margin: 0 0 40px;
+        }
+      }
+    }
+  }
+
+   @media only screen and (max-width: 480px) {
+    .benefits_content  {
+      .cards {
+        .benefits_card_area {
+          width: 100%;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}

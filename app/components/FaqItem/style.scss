@@ -1,0 +1,27 @@
+.faq_item {
+  border-bottom: 1px solid rgba($color: #fff, $alpha: 0.7);
+  width: 100%;
+  .faq_item_title {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 0;
+
+    h4 {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    svg {
+      cursor: pointer;
+    }
+  }
+  
+
+  .faq_item_txt {
+    p {
+      font-size: 16px;
+      font-weight: 300;
+      padding-bottom: 30px;
+    }
+  }
+}

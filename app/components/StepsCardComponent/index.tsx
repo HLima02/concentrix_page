@@ -1,12 +1,7 @@
 import React from 'react'
 import './style.scss'
 
-type StepsCardComponentProps = {
-  numberLabel: string 
-  title:string ,
-  text:string, 
-  image:string
-}
+import { StepsCardComponentProps } from '@/types/types'
 
 export default function StepsCardComponent({numberLabel, title, text, image}:StepsCardComponentProps) {
   return (
