@@ -1,7 +1,6 @@
 import React from 'react'
 import './style.scss'
 import CardBenefits from '@/app/components/CardBenefits'
-import { ArrowDownCircle } from "@deemlol/next-icons";
 import ArrowBottomBtn from '@/app/components/ArrowBottomBtn';
 
 export default function Benefits() {

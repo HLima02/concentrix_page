@@ -12,3 +12,9 @@ export type ButtonProps = {
 export type InputFiledsProps = {
   labelText?: string,
 } & React.ComponentProps<'input'> 
+
+export type CardBenefitsProps = {
+  label: string,
+  cardImage: string,
+  cardTitle: string
+}

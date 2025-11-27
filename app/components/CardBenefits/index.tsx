@@ -1,11 +1,7 @@
 import React from 'react'
 import './style.scss'
 
-type CardBenefitsProps = {
-  label: string,
-  cardImage: string,
-  cardTitle: string
-}
+import { CardBenefitsProps } from '@/types/types'
 
 export default function CardBenefits({label, cardImage, cardTitle}: CardBenefitsProps) {
   return (
