@@ -1,0 +1,40 @@
+import React from 'react'
+import './style.scss'
+import Button from '@/app/components/Button'
+import InputFileds from '@/app/components/InputFields'
+
+export default function MainBanner() {
+  return (
+    <section className='banner'>
+      <div className='content banner_content'>
+        <div className="banner_left">
+          <p>Tenha aqui</p><br/>
+          <p>a melhor</p><br/>
+          <p>experiência.</p>
+        </div>
+        <div className="banner_input_data">
+          <h2>Tipo de perfil</h2>
+
+          <div className="btn_area">
+            <Button background_color="#039DB7" txt_color='#fff' w_size="165px"  border='2px solid #039DB7'>Pessoa Física</Button>
+            <Button background_color="#transparent" txt_color='#628295' w_size="165px" border='2px solid #628295'>Pessoa jurídica</Button>
+          </div>
+
+          <div className="inputArea">
+            <InputFileds labelText="CPF" type='text' placeholder='000.000.000-00' />
+            <InputFileds labelText="Data nascimento" type='text' placeholder='00/00/0000' />
+          </div>
+
+          <Button background_color="#039DB7" txt_color='#fff' w_size="100%"  border='2px solid #039DB7'>Entrar</Button>
+        </div>
+      </div>
+
+      <div className='content more'>
+        <div className="border_icon bounce">
+          <div className="bar_icon pulse"></div>
+        </div>
+        <span>Saiba mais</span>
+      </div>
+    </section>
+  )
+}
