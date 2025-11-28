@@ -35,24 +35,16 @@ export default function MainBanner() {
   return (
     <section className='banner'>
       <div className='content banner_content'>
-        <div className="banner_left">
-          <motion.p
-          initial={{opacity: 0, y: 400}}
-          whileInView={{opacity: 1, y: 0}}
-          transition={{duration: 0.4, ease: 'easeInOut'}}
-          viewport={{once: true}}
-          >Tenha aqui</motion.p><br/>
-          <motion.p  
-          initial={{opacity: 0, y: 400}}
-          whileInView={{opacity: 1, y: 0}}
-          transition={{delay: 0.2, duration: 0.4, ease: 'easeInOut'}}
-          viewport={{once: true}}>a melhor</motion.p><br/>
-          <motion.p
-          initial={{opacity: 0, y: 400}}
-          whileInView={{opacity: 1, y: 0}}
-          transition={{delay: 0.4, duration: 0.4, ease: 'easeInOut'}}
-          viewport={{once: true}}>experiência.</motion.p>
-        </div>
+        <motion.div 
+         initial={{opacity: 0,}}
+        whileInView={{opacity: 1,}}
+        transition={{duration: 0.6, ease: 'easeInOut'}}
+        viewport={{once: true}}
+        className="banner_left">
+          <p>Tenha aqui</p><br/>
+          <p>a melhor</p><br/>
+          <p>experiência.</p>
+        </motion.div>
         <motion.div 
         initial={{opacity: 0}}
         whileInView={{opacity: 1}}
@@ -122,7 +114,7 @@ export default function MainBanner() {
       <motion.div 
       initial={{opacity: 0, y: 200}}
       whileInView={{opacity: 1, y: 0}}
-      transition={{delay: 0.8, duration: 0.6, ease: 'easeInOut'}}
+      transition={{duration: 0.6, ease: 'easeInOut'}}
       viewport={{once: true}}
       className='content more'>
         <a href='#benefits'>

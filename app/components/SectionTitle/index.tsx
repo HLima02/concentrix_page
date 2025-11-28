@@ -13,13 +13,13 @@ export default function SectionTitle({title, subTitle}:SectionTitleProps) {
       <motion.h2
       initial={{opacity: 0, y: 400}}
       whileInView={{opacity: 1, y: 0}}
-      transition={{ duration: 0.3, ease: 'easeInOut'}}
+      transition={{duration: 0.3, ease: 'easeInOut'}}
       viewport={{once: true}}
       >{title}</motion.h2>
       <motion.p
       initial={{opacity: 0, y: 400}}
       whileInView={{opacity: 1, y: 0}}
-      transition={{delay: 0.2, duration: 0.3, ease: 'easeInOut'}}
+      transition={{delay: 0.1, duration: 0.3, ease: 'easeInOut'}}
       viewport={{once: true}}
       >{subTitle}</motion.p>
     </div>
