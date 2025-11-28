@@ -6,7 +6,7 @@ import { askedQuestion } from '@/app/lib/constants'
 
 export default function AskedQuestions() {
   return (
-    <section className='asked'>
+    <section className='asked' id='asked'>
       <div className="content asked_content">
         <h2>Perguntas frequentes</h2>
         <p>Tire suas dúvidas</p>

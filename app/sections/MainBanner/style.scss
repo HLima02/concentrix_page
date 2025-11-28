@@ -57,6 +57,12 @@
     flex-direction: column;
     gap: 10px;
 
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     .border_icon {
       width: 18px;
       height: 26px;
@@ -95,9 +101,12 @@
   }
 
   @media only screen and (max-width: 690px) {
+    gap: 40px;
+    padding: 60px 0;
+
     .banner_content {
       flex-direction: column;
-      width: auto;
+      // width: auto;
       align-items: flex-start;
       gap: 20px;
     }

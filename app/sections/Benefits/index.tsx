@@ -5,7 +5,7 @@ import ArrowBottomBtn from '@/app/components/ArrowBottomBtn';
 
 export default function Benefits() {
   return (
-    <section className='benefits'>
+    <section className='benefits' id='benefits'>
       <div className="content benefits_content">
         <h2>
           Benefícios para ajudar<br/>
@@ -27,7 +27,7 @@ export default function Benefits() {
           </div>
         </div>
 
-        <ArrowBottomBtn arrowLink="#" />
+        <ArrowBottomBtn arrowLink="#service_section" />
       </div>
     </section>
   )

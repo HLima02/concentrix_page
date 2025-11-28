@@ -5,12 +5,14 @@ export type ButtonProps = {
   label?: string,
   txt_color?: string,
   background_color?: string,
+  background_hover?: string,
   w_size: string,
   border?: string
 } & React.ComponentProps<'button'>
 
 export type InputFiledsProps = {
   labelText?: string,
+  mask: "cpf" | "cnpj" | "date"
 } & React.ComponentProps<'input'> 
 
 export type CardBenefitsProps = {

@@ -18,7 +18,7 @@ import { stepsContent } from '@/app/lib/constants'
 export default function StepByStep() {
  
   return (
-    <section className="step_by_step">
+    <section className="step_by_step" id='step_by_step'>
       <div className="content step_by_step_content">
 
         <SectionTitle 
@@ -65,7 +65,7 @@ export default function StepByStep() {
           </Swiper>
         </div>
 
-        <ArrowBottomBtn arrowLink="#" />
+        <ArrowBottomBtn arrowLink="#asked" />
       </div>
     </section>
   );

@@ -6,7 +6,7 @@ import ArrowBottomBtn from '@/app/components/ArrowBottomBtn';
 
 export default function ServiceSection() {
   return (
-    <section className='service_section'>
+    <section className='service_section' id='service_section'>
       <div className="content service_section_content">
         <SectionTitle title="Atendimento personalizado" subTitle="Diversos canais, para cada necessidade." />
 
@@ -15,7 +15,7 @@ export default function ServiceSection() {
           <CardServices imagePath="/images/whats_icon.png" cardTxt="Praticidade" cardTitle="WhatsApp"  bgImagePath="/images/whatsapp_bg.png" />
         </div>
 
-        <ArrowBottomBtn arrowLink="#" />
+        <ArrowBottomBtn arrowLink="#step_by_step" />
       </div>
     </section>
   )
