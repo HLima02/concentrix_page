@@ -2,10 +2,7 @@ import React from 'react'
 import * as motion from 'motion/react-client'
 import './style.scss'
 
-type SectionTitleProps = {
-  title: string, 
-  subTitle: string
-}
+import { SectionTitleProps } from '@/types/types'
 
 export default function SectionTitle({title, subTitle}:SectionTitleProps) {
   return (

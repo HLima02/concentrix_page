@@ -12,8 +12,8 @@ export type ButtonProps = {
 
 export type InputFiledsProps = {
   labelText?: string,
-  mask: "cpf" | "cnpj" | "date",
-  onChangeValue: any
+  mask?: "cpf" | "cnpj" | "date",
+  onChangeValue: (value:string) => void
   valueTxt?: any
 } & React.ComponentProps<'input'> 
 
@@ -28,4 +28,13 @@ export type StepsCardComponentProps = {
   title:string ,
   text:string, 
   image:string
+}
+
+export type SectionTitleProps = {
+  title: string, 
+  subTitle: string
+}
+
+export type ArrowBottomBtnProps = {
+  arrowLink: string,
 }

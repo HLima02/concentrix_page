@@ -3,9 +3,8 @@ import './style.scss'
 import * as motion from 'motion/react-client'
 import { ArrowDownCircle } from "@deemlol/next-icons";
 
-type ArrowBottomBtnProps = {
-  arrowLink: string,
-}
+import { ArrowBottomBtnProps } from '@/types/types';
+
 
 export default function ArrowBottomBtn({arrowLink}:ArrowBottomBtnProps) {
   return (
