@@ -27,18 +27,28 @@ export default function MainBanner() {
 
   function handleSendInfos() {
     const date = parse(userData.data, 'dd/MM/yyyy', new Date());
-    if((isValid(date) && cpf.isValid(userData.cpf)) || 
-    (isValid(date) && cnpj.isValid(userData.cnpj)) ){
-        toast.success("Seus dados foram enviados com Sucesso!")
-        setUserData({
-          cpf: '',
-          cnpj: '',
-          data: ''
-        })
-    } else {
-      toast.warning("Data inválida! Por favor, preenchar com uma data válida.")
-      return
-    }   
+
+    if(!isValid(date)) {
+      toast.warning("Data inválida! Por favor, preencha uma data válida.");
+      return;
+    }
+
+    if(!cpf.isValid(userData.cpf) && userData.cnpj == "") {
+      toast.warning("CPF inválido! Por favor, preencha um CPF válido.");
+      return;
+    }
+
+    if(!cnpj.isValid(userData.cnpj) && userData.cpf === "") {
+      toast.warning("CNPJ inválido! Por favor, preencha um CNPJ válido.");
+      return;
+    }
+
+    toast.success("Seus dados foram enviados com Sucesso!")
+      setUserData({
+        cpf: '',
+        cnpj: '',
+        data: ''
+      })  
   }
 
   return (
