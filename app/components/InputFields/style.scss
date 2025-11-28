@@ -20,4 +20,9 @@
     font-size: 16px;
     color: #A5B0BB;
   }
+
+  input:focus {
+    border: 1px solid #00BED2;
+    color: #00BED2;
+  }
 }
