@@ -1,5 +1,7 @@
 'use client'
 import React, { useState } from 'react'
+import { isValid, parse } from 'date-fns';
+import { cpf, cnpj } from 'cpf-cnpj-validator';
 import * as motion from 'motion/react-client'
 import './style.scss'
 import Button from '@/app/components/Button'
@@ -24,12 +26,19 @@ export default function MainBanner() {
   }
 
   function handleSendInfos() {
-    toast.success("Seus dados foram enviados com Sucesso!")
-    setUserData({
-      cpf: '',
-      cnpj: '',
-      data: ''
-    })
+    const date = parse(userData.data, 'dd/MM/yyyy', new Date());
+    if((isValid(date) && cpf.isValid(userData.cpf)) || 
+    (isValid(date) && cnpj.isValid(userData.cnpj)) ){
+        toast.success("Seus dados foram enviados com Sucesso!")
+        setUserData({
+          cpf: '',
+          cnpj: '',
+          data: ''
+        })
+    } else {
+      toast.warning("Data inválida! Por favor, preenchar com uma data válida.")
+      return
+    }   
   }
 
   return (
