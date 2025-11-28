@@ -8,6 +8,8 @@ import StepByStep from './sections/StepByStep'
 import AskedQuestions from './sections/AskedQuestions'
 import Footer from './sections/Footer'
 
+ import { ToastContainer } from 'react-toastify';
+
 export default function Home() {
   return (
     <main>
@@ -18,6 +20,10 @@ export default function Home() {
       <StepByStep />
       <AskedQuestions />
       <Footer />
+      <ToastContainer 
+        autoClose={3000}
+        closeOnClick
+        pauseOnHover />
     </main>
   )
 }

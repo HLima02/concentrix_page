@@ -5,16 +5,13 @@ import './style.scss'
 import { InputFiledsProps } from '@/types/types'
 import { applyMask } from '@/utils/masks'
 
-export default function InputFileds({ type, id, labelText, mask, ...rest }:InputFiledsProps) {
-  const [value, setValue] = useState<string>("")
-
+export default function InputFileds({ type, id, labelText, mask, valueTxt, onChangeValue, ...rest }:InputFiledsProps) {
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     const raw = e.target.value
 
     const masked = mask ? applyMask(raw, mask) : raw
-    console.log(value.length)
 
-    setValue(masked)
+    onChangeValue?.(masked)
   }
 
   return (
@@ -23,7 +20,7 @@ export default function InputFileds({ type, id, labelText, mask, ...rest }:Input
         <label htmlFor={id}>{ labelText }</label>
       }
       
-      <input type={type} {...rest} value={value} onChange={handleChange} />
+      <input type={type} {...rest} value={valueTxt} onChange={handleChange} />
     </>
   )
 }

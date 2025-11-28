@@ -3,9 +3,33 @@ import React, { useState } from 'react'
 import './style.scss'
 import Button from '@/app/components/Button'
 import InputFileds from '@/app/components/InputFields'
+import { toast } from 'react-toastify'
 
 export default function MainBanner() {
   const [isCpf, setIsCpf] = useState<boolean>(true)
+  const [userData, setUserData] = useState({
+    cpf: '',
+    cnpj: '',
+    data: ''
+  })
+
+  function handleChangePRofileType(type:boolean) {
+    setIsCpf(type)
+    setUserData({
+      cpf: '',
+      cnpj: '',
+      data: ''
+    })
+  }
+
+  function handleSendInfos() {
+    toast.success("Seus dados foram enviados com Sucesso!")
+    setUserData({
+      cpf: '',
+      cnpj: '',
+      data: ''
+    })
+  }
 
   return (
     <section className='banner'>
@@ -20,31 +44,59 @@ export default function MainBanner() {
 
           <div className="btn_area">
             <Button background_color="#039DB7" background_hover="#0A7D94"  txt_color='#fff' w_size="165px"  border='2px solid #039DB7'
-            onClick={() => setIsCpf(true)}>Pessoa Física</Button>
+            onClick={() => handleChangePRofileType(true)}>Pessoa Física</Button>
             <Button background_color="transparent" background_hover="#F6F8F9" txt_color='#628295' w_size="165px" border='2px solid #628295'
-            onClick={() => setIsCpf(false)}>Pessoa jurídica</Button>
+            onClick={() => handleChangePRofileType(false)}>Pessoa jurídica</Button>
           </div>
 
           {isCpf ? (
             <div className="inputArea">
-              <InputFileds mask="cpf" labelText="CPF" type='text' placeholder='000.000.000-00' />
-              <InputFileds mask="date" labelText="Data nascimento" type='text' placeholder='00/00/0000' />
+              <InputFileds mask="cpf" labelText="CPF" type='text' placeholder='000.000.000-00' valueTxt={userData.cpf}  onChangeValue={(value:any) => 
+                setUserData(prev => ({ ...prev, cpf: value }))
+                
+              }/>
+              <InputFileds mask="date" labelText="Data nascimento" type='text' placeholder='00/00/0000' valueTxt={userData.data} onChangeValue={(value:any) => 
+                setUserData(prev => ({ ...prev, data: value }))
+              }/>
             </div>
           ) : (
             <div className="inputArea">
-              <InputFileds mask="cnpj" labelText="CNPJ" type='text' placeholder='00.000.000/0001-00' />
-              <InputFileds mask="date" labelText="Data nascimento" type='text' placeholder='00/00/0000' />
+              <InputFileds mask="cnpj" labelText="CNPJ" type='text' placeholder='00.000.000/0001-00' valueTxt={userData.cnpj} onChangeValue={(value:any) => 
+                setUserData(prev => ({ ...prev, cnpj: value }))
+              }/>
+
+             <InputFileds mask="date" labelText="Data nascimento" type='text' placeholder='00/00/0000' valueTxt={userData.data} onChangeValue={(value:any) => 
+                setUserData(prev => ({ ...prev, data: value }))
+              }/>
             </div>
           )}
 
-         
 
+          {(
+            (isCpf && userData.cpf !== "" && userData.data !== "") || 
+            (!isCpf && userData.cnpj !== "" && userData.data !== "")) 
+            ? (
           <Button 
-          background_color="#039DB7" 
-          background_hover="#0A7D94" 
-          txt_color='#fff' 
-          w_size="100%"  
-          border='2px solid #039DB7' >Entrar</Button>
+            background_color="#039DB7" 
+            background_hover="#0A7D94" 
+            txt_color='#fff' 
+            w_size="100%"  
+            border='2px solid #039DB7'
+            onClick={() => handleSendInfos()} >Entrar</Button>
+          ) : (
+            <Button 
+            background_color="#CAD1D7" 
+            background_hover="#CAD1D7" 
+            txt_color='##A5B0BB' 
+            w_size="100%"  
+            border='2px solid #CAD1D7' 
+            disabled >Entrar</Button>
+          )}
+         
+          
+          
+
+          
         </div>
       </div>
 
