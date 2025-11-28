@@ -12,7 +12,7 @@ export default function Footer() {
         <motion.div 
         initial={{opacity: 0}}
         whileInView={{opacity: 1}}
-        transition={{duration: 0.8, ease: 'easeInOut'}}
+        transition={{duration: 0.5, ease: 'easeInOut'}}
         viewport={{once: true}}
         className="slider_top">
           <img src="/images/slider_icon.png" alt='Slider icone' />
@@ -22,7 +22,7 @@ export default function Footer() {
           <motion.div 
           initial={{opacity: 0}}
           whileInView={{opacity: 1}}
-          transition={{delay: 0.3, duration: 0.8, ease: 'easeInOut'}}
+          transition={{delay: 0.2, duration: 0.5, ease: 'easeInOut'}}
           viewport={{once: true}}
           className="middle_left">
             <h4>Sobre</h4>
@@ -33,7 +33,7 @@ export default function Footer() {
           <motion.div 
           initial={{opacity: 0}}
           whileInView={{opacity: 1}}
-          transition={{delay: 0.6, duration: 0.8, ease: 'easeInOut'}}
+          transition={{delay: 0.4, duration: 0.5, ease: 'easeInOut'}}
           viewport={{once: true}} 
           className="middle_center">
             <FooterIconsComponent  title={footerInfoCall.title} images={footerInfoCall.images} />
@@ -42,7 +42,7 @@ export default function Footer() {
           <motion.div 
           initial={{opacity: 0}}
           whileInView={{opacity: 1}}
-          transition={{delay: 0.9, duration: 0.8, ease: 'easeInOut'}}
+          transition={{delay: 0.6, duration: 0.5, ease: 'easeInOut'}}
           viewport={{once: true}} 
           className="right">
             <FooterIconsComponent  title={footerInfoPayments.title} images={footerInfoPayments.images} />
@@ -52,7 +52,7 @@ export default function Footer() {
         <motion.div 
           initial={{opacity: 0}}
           whileInView={{opacity: 1}}
-          transition={{delay: 1.2, duration: 0.8, ease: 'easeInOut'}}
+          transition={{delay: 0.8, duration: 0.5, ease: 'easeInOut'}}
           viewport={{once: true}} 
           className="bottom">
           <p className='legal_txt'>© 2023. Todos direitos reservados à Webhelp</p>

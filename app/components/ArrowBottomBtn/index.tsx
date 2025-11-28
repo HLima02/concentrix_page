@@ -12,7 +12,7 @@ export default function ArrowBottomBtn({arrowLink}:ArrowBottomBtnProps) {
     <motion.div 
       initial={{opacity: 0, y: 200}}
       whileInView={{opacity: 1, y: 0}}
-      transition={{delay: 0.3, duration: 0.6, ease: 'easeInOut'}}
+      transition={{delay: 0.1, duration: 0.5, ease: 'easeInOut'}}
       viewport={{once: true}}
     className='arrow'>
       <a href={arrowLink}>
