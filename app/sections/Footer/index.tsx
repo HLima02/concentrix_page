@@ -1,4 +1,5 @@
 import React from 'react'
+import * as motion from 'motion/react-client'
 import './style.scss'
 
 import { footerInfoCall, footerInfoPayments } from '@/app/lib/constants'
@@ -8,27 +9,52 @@ export default function Footer() {
   return (
     <footer className='footer'>
       <div className="content footer_content">
-        <div className="slider_top">
+        <motion.div 
+        initial={{opacity: 0}}
+        whileInView={{opacity: 1}}
+        transition={{duration: 0.8, ease: 'easeInOut'}}
+        viewport={{once: true}}
+        className="slider_top">
           <img src="/images/slider_icon.png" alt='Slider icone' />
-        </div>
+        </motion.div>
 
         <div className="middle">
-          <div className="middle_left">
+          <motion.div 
+          initial={{opacity: 0}}
+          whileInView={{opacity: 1}}
+          transition={{delay: 0.3, duration: 0.8, ease: 'easeInOut'}}
+          viewport={{once: true}}
+          className="middle_left">
             <h4>Sobre</h4>
             <a href='#'>Quem somos</a>
             <a href='#'>Política de privacidade</a>
-          </div>
+          </motion.div>
 
-          <div className="middle_center">
+          <motion.div 
+          initial={{opacity: 0}}
+          whileInView={{opacity: 1}}
+          transition={{delay: 0.6, duration: 0.8, ease: 'easeInOut'}}
+          viewport={{once: true}} 
+          className="middle_center">
             <FooterIconsComponent  title={footerInfoCall.title} images={footerInfoCall.images} />
-          </div>
+          </motion.div>
 
-          <div className="right">
+          <motion.div 
+          initial={{opacity: 0}}
+          whileInView={{opacity: 1}}
+          transition={{delay: 0.9, duration: 0.8, ease: 'easeInOut'}}
+          viewport={{once: true}} 
+          className="right">
             <FooterIconsComponent  title={footerInfoPayments.title} images={footerInfoPayments.images} />
-          </div>
+          </motion.div>
         </div>
 
-        <div className="bottom">
+        <motion.div 
+          initial={{opacity: 0}}
+          whileInView={{opacity: 1}}
+          transition={{delay: 1.2, duration: 0.8, ease: 'easeInOut'}}
+          viewport={{once: true}} 
+          className="bottom">
           <p className='legal_txt'>© 2023. Todos direitos reservados à Webhelp</p>
           <div className='bottom_img_txt'>
             <div className='img_txt_item'>
@@ -42,7 +68,7 @@ export default function Footer() {
               Certificado SSL</p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </footer>
   )

@@ -1,5 +1,6 @@
 'use client'
 import React from 'react'
+import * as motion from 'motion/react-client'
 import './style.scss'
 
 import SectionTitle from '@/app/components/SectionTitle'
@@ -27,7 +28,12 @@ export default function StepByStep() {
         />
         
 
-        <div className="steps_cards_section">
+        <motion.div 
+        initial={{opacity: 0}}
+        whileInView={{opacity: 1}}
+        transition={{duration: 0.8, ease: 'easeInOut'}}
+        viewport={{once: true}}
+        className="steps_cards_section">
           <Swiper
             modules={[Navigation, Pagination]}
             spaceBetween={20}
@@ -63,7 +69,7 @@ export default function StepByStep() {
               </SwiperSlide>
             ))}
           </Swiper>
-        </div>
+        </motion.div>
 
         <ArrowBottomBtn arrowLink="#asked" />
       </div>

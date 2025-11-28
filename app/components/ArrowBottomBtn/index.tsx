@@ -1,5 +1,6 @@
 import React from 'react'
 import './style.scss'
+import * as motion from 'motion/react-client'
 import { ArrowDownCircle } from "@deemlol/next-icons";
 
 type ArrowBottomBtnProps = {
@@ -8,10 +9,15 @@ type ArrowBottomBtnProps = {
 
 export default function ArrowBottomBtn({arrowLink}:ArrowBottomBtnProps) {
   return (
-    <div className='arrow'>
+    <motion.div 
+      initial={{opacity: 0, y: 200}}
+      whileInView={{opacity: 1, y: 0}}
+      transition={{delay: 0.3, duration: 0.6, ease: 'easeInOut'}}
+      viewport={{once: true}}
+    className='arrow'>
       <a href={arrowLink}>
         <ArrowDownCircle size={30} color="#22252A" />
       </a>
-    </div>
+    </motion.div>
   )
 }

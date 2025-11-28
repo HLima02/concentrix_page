@@ -1,4 +1,5 @@
 import React from 'react'
+import * as motion from 'motion/react-client'
 import './style.scss'
 
 type SectionTitleProps = {
@@ -9,8 +10,18 @@ type SectionTitleProps = {
 export default function SectionTitle({title, subTitle}:SectionTitleProps) {
   return (
     <div className='title_section'>
-      <h2>{title}</h2>
-      <p>{subTitle}</p>
+      <motion.h2
+      initial={{opacity: 0, y: 400}}
+      whileInView={{opacity: 1, y: 0}}
+      transition={{ duration: 0.3, ease: 'easeInOut'}}
+      viewport={{once: true}}
+      >{title}</motion.h2>
+      <motion.p
+      initial={{opacity: 0, y: 400}}
+      whileInView={{opacity: 1, y: 0}}
+      transition={{delay: 0.3, duration: 0.3, ease: 'easeInOut'}}
+      viewport={{once: true}}
+      >{subTitle}</motion.p>
     </div>
   )
 }

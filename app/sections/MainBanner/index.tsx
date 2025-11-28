@@ -1,5 +1,6 @@
 'use client'
 import React, { useState } from 'react'
+import * as motion from 'motion/react-client'
 import './style.scss'
 import Button from '@/app/components/Button'
 import InputFileds from '@/app/components/InputFields'
@@ -35,11 +36,29 @@ export default function MainBanner() {
     <section className='banner'>
       <div className='content banner_content'>
         <div className="banner_left">
-          <p>Tenha aqui</p><br/>
-          <p>a melhor</p><br/>
-          <p>experiência.</p>
+          <motion.p
+          initial={{opacity: 0, y: 400}}
+          whileInView={{opacity: 1, y: 0}}
+          transition={{duration: 0.4, ease: 'easeInOut'}}
+          viewport={{once: true}}
+          >Tenha aqui</motion.p><br/>
+          <motion.p  
+          initial={{opacity: 0, y: 400}}
+          whileInView={{opacity: 1, y: 0}}
+          transition={{delay: 0.3, duration: 0.4, ease: 'easeInOut'}}
+          viewport={{once: true}}>a melhor</motion.p><br/>
+          <motion.p
+          initial={{opacity: 0, y: 400}}
+          whileInView={{opacity: 1, y: 0}}
+          transition={{delay: 0.6, duration: 0.4, ease: 'easeInOut'}}
+          viewport={{once: true}}>experiência.</motion.p>
         </div>
-        <div className="banner_input_data">
+        <motion.div 
+        initial={{opacity: 0}}
+        whileInView={{opacity: 1}}
+        transition={{delay: 0.2, duration: 0.9, ease: 'easeInOut'}}
+        viewport={{once: true}}
+        className="banner_input_data">
           <h2>Tipo de perfil</h2>
 
           <div className="btn_area">
@@ -97,17 +116,22 @@ export default function MainBanner() {
           
 
           
-        </div>
+        </motion.div>
       </div>
 
-      <div className='content more'>
+      <motion.div 
+      initial={{opacity: 0, y: 200}}
+      whileInView={{opacity: 1, y: 0}}
+      transition={{delay: 0.8, duration: 0.6, ease: 'easeInOut'}}
+      viewport={{once: true}}
+      className='content more'>
         <a href='#benefits'>
           <div className="border_icon bounce">
             <div className="bar_icon pulse"></div>
           </div>
           <span>Saiba mais</span>
         </a>
-      </div>
+      </motion.div>
     </section>
   )
 }
