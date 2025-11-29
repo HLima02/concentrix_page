@@ -15,6 +15,9 @@ export default function MainBanner() {
     cnpj: '',
     data: ''
   })
+  const [errorCpf, setErrorCpf] = useState<boolean>(false)
+  const [errorData, setErrorData] = useState<boolean>(false)
+  const [errorCnpj, setErrorDataCnpj] = useState<boolean>(false)
 
   function handleChangePRofileType(type:boolean) {
     setIsCpf(type)
@@ -28,18 +31,21 @@ export default function MainBanner() {
   function handleSendInfos() {
     const date = parse(userData.data, 'dd/MM/yyyy', new Date());
 
-    if(!isValid(date)) {
-      toast.warning("Data inválida! Por favor, preencha uma data válida.");
-      return;
-    }
-
     if(!cpf.isValid(userData.cpf) && userData.cnpj == "") {
       toast.warning("CPF inválido! Por favor, preencha um CPF válido.");
+      setErrorCpf(true)
       return;
     }
 
     if(!cnpj.isValid(userData.cnpj) && userData.cpf === "") {
       toast.warning("CNPJ inválido! Por favor, preencha um CNPJ válido.");
+      setErrorDataCnpj(true)
+      return;
+    }
+
+    if(!isValid(date)) {
+      toast.warning("Data inválida! Por favor, preencha uma data válida.");
+      setErrorData(true)
       return;
     }
 
@@ -49,6 +55,9 @@ export default function MainBanner() {
         cnpj: '',
         data: ''
       })  
+      setErrorCpf(false)
+      setErrorDataCnpj(false)
+      setErrorData(false)
   }
 
   return (
@@ -81,21 +90,22 @@ export default function MainBanner() {
 
           {isCpf ? (
             <div className="inputArea">
-              <InputFileds mask="cpf" labelText="CPF" type='text' placeholder='000.000.000-00' valueTxt={userData.cpf}  onChangeValue={(value:any) => 
+              <InputFileds mask="cpf" errorStyle={errorCpf} labelText="CPF" type='text' placeholder='000.000.000-00' valueTxt={userData.cpf}  onChangeValue={(value:any) => 
                 setUserData(prev => ({ ...prev, cpf: value }))
                 
-              }/>
-              <InputFileds mask="date" labelText="Data nascimento" type='text' placeholder='00/00/0000' valueTxt={userData.data} onChangeValue={(value:any) => 
+              }/> 
+              <InputFileds mask="date" errorStyle={errorData} labelText="Data nascimento" type='text' placeholder='00/00/0000' valueTxt={userData.data} onChangeValue={(value:any) => 
                 setUserData(prev => ({ ...prev, data: value }))
+                
               }/>
             </div>
           ) : (
             <div className="inputArea">
-              <InputFileds mask="cnpj" labelText="CNPJ" type='text' placeholder='00.000.000/0001-00' valueTxt={userData.cnpj} onChangeValue={(value:any) => 
+              <InputFileds mask="cnpj" errorStyle={errorCnpj} labelText="CNPJ" type='text' placeholder='00.000.000/0001-00' valueTxt={userData.cnpj} onChangeValue={(value:any) => 
                 setUserData(prev => ({ ...prev, cnpj: value }))
               }/>
 
-             <InputFileds mask="date" labelText="Data nascimento" type='text' placeholder='00/00/0000' valueTxt={userData.data} onChangeValue={(value:any) => 
+             <InputFileds mask="date" errorStyle={errorData} labelText="Data nascimento" type='text' placeholder='00/00/0000' valueTxt={userData.data} onChangeValue={(value:any) => 
                 setUserData(prev => ({ ...prev, data: value }))
               }/>
             </div>

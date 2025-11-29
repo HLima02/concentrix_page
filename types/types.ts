@@ -14,7 +14,8 @@ export type InputFiledsProps = {
   labelText?: string,
   mask?: "cpf" | "cnpj" | "date",
   onChangeValue: (value:string) => void
-  valueTxt?: any
+  valueTxt?: any,
+  errorStyle?: boolean
 } & React.ComponentProps<'input'> 
 
 export type CardBenefitsProps = {
