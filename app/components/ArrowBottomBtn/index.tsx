@@ -9,8 +9,8 @@ import { ArrowBottomBtnProps } from '@/types/types';
 export default function ArrowBottomBtn({arrowLink}:ArrowBottomBtnProps) {
   return (
     <motion.div 
-      initial={{opacity: 0, y: 200}}
-      whileInView={{opacity: 1, y: 0}}
+      initial={{opacity: 0}}
+      whileInView={{opacity: 1}}
       transition={{duration: 0.4, ease: 'easeInOut'}}
       viewport={{once: true}}
     className='arrow'>
