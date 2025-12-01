@@ -41,7 +41,7 @@ export default function StepByStep() {
             navigation={true}
             breakpoints={{
               0: {
-                slidesPerView: 1.1,
+                slidesPerView: 1,
               },
               640: {
                 slidesPerView: 1.5,
