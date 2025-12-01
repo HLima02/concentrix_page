@@ -77,7 +77,7 @@ export default function MainBanner() {
         initial={{opacity: 0}}
         whileInView={{opacity: 1}}
         transition={{delay: 0.2, duration: 0.9, ease: 'easeInOut'}}
-        viewport={{once: true}}
+        // viewport={{once: true}}
         className="banner_input_data">
           <h2>Tipo de perfil</h2>
 
@@ -144,7 +144,7 @@ export default function MainBanner() {
       initial={{opacity: 0, y: 200}}
       whileInView={{opacity: 1, y: 0}}
       transition={{duration: 0.6, ease: 'easeInOut'}}
-      viewport={{once: true}}
+      // viewport={{once: true}}
       className='content more'>
         <a href='#benefits'>
           <div className="border_icon bounce">
