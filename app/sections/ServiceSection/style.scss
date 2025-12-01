@@ -1,5 +1,7 @@
+@import '../../../styles/variables';
+
 .service_section {
-  background-color: #fff;
+  background-color: $white;
   padding: 90px 0 40px;
   display: flex;
   justify-content: center;

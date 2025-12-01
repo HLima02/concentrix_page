@@ -1,10 +1,12 @@
+@import '../../../styles/variables';
+
 .asked {
-  background-color: #039DB7;
+  background-color: $blue-100;
   padding: 90px 0 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: $white;
 
   .asked_content {
     display: flex;
